@@ -16,6 +16,7 @@ git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./instal
 ### GTG
 ![GTG](images/GTG.png)
 [Theme Creator Page](https://www.gnome-look.org/p/2064031)
+##
 ### Xenlism-ubuntu
 ![xenlism-ubuntu](images/xenlism-ubuntu.jpg)
 [Theme Creator Page](https://www.gnome-look.org/p/1440862)
