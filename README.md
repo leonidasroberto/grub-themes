@@ -19,5 +19,7 @@
 [Theme Creator Page](https://www.gnome-look.org/p/1727268)
 ### Menu Theme Selector
 ![Menu Selector](images/menu.png)
-'''git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./install.sh'''
+```sh
+git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./install.sh
+```
 [Created By Leonidas Roberto](https://github.com/leonidasroberto)
