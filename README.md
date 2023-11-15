@@ -1,5 +1,6 @@
 # Menu Theme Selector
 ![Menu Selector](images/menu.png)
+### How to use/Como utilizar:
 ```sh
 git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./install.sh
 ```
