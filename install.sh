@@ -77,6 +77,14 @@ function applytheme () {
     "GTG")
     THEME_NAME="grub_gtg-v1.2"
     tar -xf $(pwd)/themes/GTG-grub-theme.tar.tar -C $THEME_DIR
+    tar -C $THEME_DIR -xf $(pwd)/themes/GTG-grub-theme.tar.tar grub_gtg-v1.2/assets
+    mv $THEME_DIR/$THEME_NAME/assets/* $THEME_DIR/$THEME_NAME
+    # Copy assets
+    cp $THEME_DIR/$THEME_NAME/images/background.png $THEME_DIR/$THEME_NAME/background.png
+    cp $THEME_DIR/$THEME_NAME/menu/menu_*.png $THEME_DIR/$THEME_NAME
+    cp $THEME_DIR/$THEME_NAME/selection/select_*.png $THEME_DIR/$THEME_NAME
+    cp $THEME_DIR/$THEME_NAME/scrollbar/scrollbar_thumb_c.png $THEME_DIR/$THEME_NAME
+    rm -r $THEME_DIR/$THEME_NAME/assets
     echo 50
     grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
     echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
@@ -87,6 +95,8 @@ function applytheme () {
     "XENLISM-ARCH-1080")
     THEME_NAME="xenlism-grub-arch-1080p"
     tar -C $THEME_DIR -xf $(pwd)/themes/xenlism-grub-arch-1080p.tar.xz xenlism-grub-arch-1080p/Xenlism-Arch
+    mv $THEME_DIR/$THEME_NAME/Xenlism-Arch/* $THEME_DIR/$THEME_NAME
+    rm -r $THEME_DIR/$THEME_NAME/Xenlism-Arch
     echo 50
     grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
     echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
@@ -96,8 +106,9 @@ function applytheme () {
     ;;
     "XENLISM-GENTOO-1080")
     THEME_NAME="xenlism-grub-gentoo-1080p"
-    tar -xf $(pwd)/themes/xenlism-grub-gentoo-1080p.tar.xz -C $THEME_DIR
     tar -C $THEME_DIR -xf $(pwd)/themes/xenlism-grub-arch-1080p.tar.xz xenlism-grub-gentoo-1080p/Xenlism-Gentoo
+    mv $THEME_DIR/$THEME_NAME/Xenlism-Gentoo/* $THEME_DIR/$THEME_NAME
+    rm -r $THEME_DIR/$THEME_NAME/Xenlism-Gentoo
     echo 50
     grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
     echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
@@ -111,5 +122,3 @@ function applytheme () {
 
 applytheme | dialog --gauge "APPLYNG GRUB THEME..." 8 50 0
 clear
-# echo $v
-
