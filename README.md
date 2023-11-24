@@ -2,7 +2,7 @@
 ![Menu Selector](images/menu.png)
 ### How to use/Como utilizar:
 ```sh
-git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./install.sh
+git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;sudo ./install.sh
 ```
 [Created By Leonidas Roberto](https://github.com/leonidasroberto)
 ##
@@ -18,7 +18,7 @@ git clone https://github.com/leonidasroberto/grub-themes;cd grub-themes;./instal
 ![GTG](images/GTG.png)
 [Theme Creator Page](https://www.gnome-look.org/p/2064031)
 ##
-### Xenlism-ubuntu
+### Xenlism-arch / Xenlism-gentoo
 ![xenlism-ubuntu](images/xenlism-ubuntu.jpg)
 [Theme Creator Page](https://www.gnome-look.org/p/1440862)
 ##
